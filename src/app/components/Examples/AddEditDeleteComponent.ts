@@ -1,0 +1,85 @@
+import { Component, ViewChild, ElementRef  } from '@angular/core';
+
+@Component({
+  selector: 'app-add-edit-grid',
+  template: `
+    <h2>With Add, Edit and Delete Option</h2>
+    <db-angular-tree-grid [data]="edit_products" [configs]="edit_configs" (add)="onAdd($event)"></db-angular-tree-grid>
+    <p> If Parent of records needs to be changed while editing then set edit_parent to true. Icon class for Expand, Collapse, Edit, Cancel, Delete and Add can be given under css property of the Grid. See documentation for more details.
+
+    </p>
+    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0">
+  </iframe> 
+  `,
+})
+export class AddEditDeleteComponent {
+  edit_products: any[] = [
+    { id: 1, name: 'Ashok', age: 60, parent: 0},
+    { id: 2, name: 'Sam', age: 40, parent: 1},
+    { id: 3, name: 'Sriya', age: 36, parent: 1},
+    { id: 4, name: 'Prakash', age: 20, parent: 2},
+    { id: 5, name: 'Sneha', age: 21, parent: 3},
+    { id: 6, name: 'Pritam', age: 60, parent: 34},
+    { id: 7, name: 'Roshan', age: 40, parent: 6},
+    { id: 8, name: 'Suraj', age: 36, parent: 6},
+    { id: 9, name: 'Swarup', age: 20, parent: 8},
+    { id: 10, name: 'Aditya', age: 21, parent: 8},
+  ];
+
+    edit_configs: any = {
+      id_field: 'id',
+      parent_id_field: 'parent',
+      parent_display_field: 'name',
+      actions: {
+        add: true,
+        edit: true,
+        delete: true,
+        edit_parent: true
+      },
+      css: { // Optional
+        expand_class: 'fa fa-caret-right',
+        collapse_class: 'fa fa-caret-down',
+        add_class: 'fa fa-plus',
+        edit_class: 'fa fa-pencil',
+        delete_class: 'fa fa-trash',
+        save_class: 'fa fa-save',
+        cancel_class: 'fa fa-remove',
+      },
+      columns: [
+        {
+          name: 'name',
+          header: 'Name',
+          editable: true
+        },
+        {
+          name: 'age',
+          header: 'Age',
+          editable: true,
+          renderer: function(value) {
+            return value + ' years';
+          }
+        }
+      ]
+    };
+
+    @ViewChild('iframe') iframe: ElementRef;
+    gistUrl: String = "https://gist.github.com/debabratapatra/231dd8eff3b5534795678c9b810606e0.js";
+
+    ngAfterViewInit() {
+      const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
+        const content = `
+            <html>
+            <head>
+              <base target="_parent">
+            </head>
+            <body>
+            <script type="text/javascript" src="${this.gistUrl}"></script>
+            </body>
+          </html>
+        `;
+        doc.open();
+        doc.write(content);
+        doc.close();
+    }
+    
+}
