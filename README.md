@@ -1,2 +1,2 @@
 # angular-tree-grid-examples
-Example for angular-tree-grid
+Examples for <a href="https://github.com/debabratapatra/angular-tree-grid">angular-tree-grid</a>
