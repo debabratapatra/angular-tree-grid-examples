@@ -62,6 +62,8 @@ export class AddEditDeleteComponent {
       ]
     };
 
+    onAdd(e) {}
+
     @ViewChild('iframe') iframe: ElementRef;
     gistUrl: String = "https://gist.github.com/debabratapatra/231dd8eff3b5534795678c9b810606e0.js";
 

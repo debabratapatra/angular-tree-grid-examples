@@ -4,12 +4,9 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   selector: 'app-filter-grid',
   template: `
     <h2>Filter Component</h2>
-    <db-angular-tree-grid 
+    <db-angular-tree-grid>
     [data]="data" 
     [configs]="configs"
-    (rowdelete)="onRowDelete($event)" 
-    (rowsave)="onRowSave($event)" 
-    (rowadd)="onRowAdd($event)">
     </db-angular-tree-grid>
     <p>
     Enable filter at grid level to enable filter toolbar. Filter can be disabled at column level.
