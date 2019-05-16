@@ -1,10 +1,14 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-filter-grid',
   template: `
     <h2>Filter Component</h2>
+    <button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+    <p></p>
     <db-angular-tree-grid
+    #angularGrid
     [data]="data" 
     [configs]="configs">
     </db-angular-tree-grid>
@@ -15,6 +19,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   `
 })
 export class FilterComponent {
+  @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;
+  
   data: any[] = [
     { id: 1, name: 'Bimal', age: 60, weight: 60, gender: 1, phone: 7930343463, parent: 0},
     { id: 2, name: 'Bhagi', age: 40, weight: 90, gender: 1, phone: 7930343463, parent: 1},
@@ -69,24 +75,33 @@ export class FilterComponent {
         }
       ]
     };
+    
 
-    @ViewChild('iframe') iframe: ElementRef;
-    gistUrl: String = "https://gist.github.com/debabratapatra/02a16518d3314039f3288144a0b09b40.js";
+  collapseAll() {
+    this.angularGrid.collapseAll();
+  }
 
-    ngAfterViewInit() {
-      const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
-        const content = `
-            <html>
-            <head>
-              <base target="_parent">
-            </head>
-            <body>
-            <script type="text/javascript" src="${this.gistUrl}"></script>
-            </body>
-          </html>
-        `;
-        doc.open();
-        doc.write(content);
-        doc.close();
-    }
+  expandAll() {
+    this.angularGrid.expandAll();
+  }
+
+  @ViewChild('iframe') iframe: ElementRef;
+  gistUrl: String = "https://gist.github.com/debabratapatra/02a16518d3314039f3288144a0b09b40.js";
+
+  ngAfterViewInit() {
+    const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
+      const content = `
+          <html>
+          <head>
+            <base target="_parent">
+          </head>
+          <body>
+          <script type="text/javascript" src="${this.gistUrl}"></script>
+          </body>
+        </html>
+      `;
+      doc.open();
+      doc.write(content);
+      doc.close();
+  }
 }

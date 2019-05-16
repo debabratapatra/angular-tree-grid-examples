@@ -5,7 +5,8 @@ import {CustomCellViewComponent} from './../Custom/CustomCellViewComponent';
   selector: 'app-view-tree-grid',
   template: `
     <h2>Custom View Component</h2>
-    <db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
+    <p></p>
+    <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
     <p>For Custom component, type of the column should be set to 'custom' and Custom Component should be set in component config of the Column. 
     This component need to be added to the entryComponents of the module.
     See below for more details.
@@ -14,6 +15,7 @@ import {CustomCellViewComponent} from './../Custom/CustomCellViewComponent';
   `
 })
 export class CustomViewComponent {
+
   data: any = [
     { id: 1, name: 'Bimal', age: 60, weight: 60, gender: 1, phone: 7930343463, parent: 0},
     { id: 2, name: 'Bhagi', age: 40, weight: 90, gender: 1, phone: 7930343463, parent: 1},
@@ -31,9 +33,6 @@ export class CustomViewComponent {
     id_field: 'id',
     parent_id_field: 'parent',
     parent_display_field: 'name',
-    css: {
-      expand_class: 'fa fa-expand'
-    },
     columns: [
       {
         name: 'name',

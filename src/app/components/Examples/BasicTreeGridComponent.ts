@@ -1,15 +1,20 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-basic-tree-grid',
   template: `
     <h2>Basic Tree Grid</h2>
-    <db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
+    <button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+    <p></p>
+    <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
     <p>For customized value, renderer function can be used(See below). Or you can use Custom View Component altogether.</p>
     <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
   `
 })
 export class BasicTreeGridComponent {
+  @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;
+  
   data: any = [
     { id: 1, name: 'Bimal', age: 60, weight: 60, gender: 1, phone: 7930343463, parent: 0},
     { id: 2, name: 'Bhagi', age: 40, weight: 90, gender: 1, phone: 7930343463, parent: 1},
@@ -63,23 +68,31 @@ export class BasicTreeGridComponent {
     ]
   };
 
-    @ViewChild('iframe') iframe: ElementRef;
-    gistUrl: String = "https://gist.github.com/debabratapatra/45295b5a7c8167202ab927aeeb6325c7.js";
+  collapseAll() {
+    this.angularGrid.collapseAll();
+  }
 
-    ngAfterViewInit() {
-      const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
-        const content = `
-            <html>
-            <head>
-              <base target="_parent">
-            </head>
-            <body>
-            <script type="text/javascript" src="${this.gistUrl}"></script>
-            </body>
-          </html>
-        `;
-        doc.open();
-        doc.write(content);
-        doc.close();
-    }
+  expandAll() {
+    this.angularGrid.expandAll();
+  }
+
+  @ViewChild('iframe') iframe: ElementRef;
+  gistUrl: String = "https://gist.github.com/debabratapatra/45295b5a7c8167202ab927aeeb6325c7.js";
+
+  ngAfterViewInit() {
+    const doc = this.iframe.nativeElement.contentDocument || this.iframe.nativeElement.contentElement.contentWindow;
+      const content = `
+          <html>
+          <head>
+            <base target="_parent">
+          </head>
+          <body>
+          <script type="text/javascript" src="${this.gistUrl}"></script>
+          </body>
+        </html>
+      `;
+      doc.open();
+      doc.write(content);
+      doc.close();
+  }
 }

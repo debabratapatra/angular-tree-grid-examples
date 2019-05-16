@@ -3,3 +3,15 @@
 body {
     margin: 0;
 }
+
+button {
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid gray;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #01475b;
+}
