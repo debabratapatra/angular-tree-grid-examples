@@ -14,25 +14,47 @@
       <td class="left-panel">
         <ul>
           <li>
-            <a href="#/basic_tree_grid">Basic Tree Grid</a>
+            <a 
+              href="#/basic_tree_grid" 
+              [ngClass]="{selected: selected_feature.basic_tree_grid}"
+              (click)="select('basic_tree_grid')"              
+              >Basic Tree Grid</a>
           </li>
           <li>
-            <a href="#/add_edit_delete">Add, Edit and Delete</a>
+            <a href="#/add_edit_delete" 
+            [ngClass]="{selected: selected_feature.add_edit_delete}" 
+            (click)="select('add_edit_delete')"
+          >Add, Edit and Delete</a>
           </li>
           <li>
-            <a href="#/cond_row_edit">Conditional Row Edit, Delete and CSS Class</a>
+            <a href="#/cond_row_edit"
+            [ngClass]="{selected: selected_feature.cond_row_edit}" 
+            (click)="select('cond_row_edit')"
+            >Conditional Row Edit, Delete and CSS Class</a>
           </li>
           <li>
-            <a href="#/custom_view_component">Custom View Component</a>
+            <a href="#/custom_view_component"
+            [ngClass]="{selected: selected_feature.custom_view_component}" 
+            (click)="select('custom_view_component')"
+            >Custom View Component</a>
           </li>
           <li>
-            <a href="#/custom_edit_component">Custom Editor Component</a>
+            <a href="#/custom_edit_component"
+            [ngClass]="{selected: selected_feature.custom_edit_component}" 
+            (click)="select('custom_edit_component')"
+            >Custom Editor Component</a>
           </li>
           <li>
-            <a href="#/resolve_row_add">Resolve Row Add/Edit/Delete</a>
+            <a href="#/resolve_row_add"
+            [ngClass]="{selected: selected_feature.resolve_row_add}" 
+            (click)="select('resolve_row_add')"
+            >Resolve Row Add/Edit/Delete</a>
           </li>
           <li>
-            <a href="#/filter_column">Filter</a>
+            <a href="#/filter_column"
+            [ngClass]="{selected: selected_feature.filter_column}" 
+            (click)="select('filter_column')"
+            >Filter</a>
           </li>
         </ul>
       </td>

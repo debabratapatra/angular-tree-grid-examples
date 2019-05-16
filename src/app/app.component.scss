@@ -141,6 +141,10 @@ td.left-panel {
         cursor: pointer;
         color: #1a73e8;
       }
+
+      &.selected {
+        background-color: rgb(227, 227, 227);
+      }
     }
   }
 }
