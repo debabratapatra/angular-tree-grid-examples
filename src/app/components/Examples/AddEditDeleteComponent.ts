@@ -4,7 +4,7 @@ import { Component, ViewChild, ElementRef  } from '@angular/core';
   selector: 'app-add-edit-grid',
   template: `
     <h2>With Add, Edit and Delete Option</h2>
-    <db-angular-tree-grid [data]="edit_products" [configs]="edit_configs" (add)="onAdd($event)"></db-angular-tree-grid>
+    <db-angular-tree-grid [data]="data" [configs]="edit_configs" (add)="onAdd($event)"></db-angular-tree-grid>
     <p> If Parent of records needs to be changed while editing then set edit_parent to true. Icon class for Expand, Collapse, Edit, Cancel, Delete and Add can be given under css property of the Grid. See documentation for more details.
 
     </p>
@@ -13,17 +13,17 @@ import { Component, ViewChild, ElementRef  } from '@angular/core';
   `,
 })
 export class AddEditDeleteComponent {
-  edit_products: any[] = [
-    { id: 1, name: 'Ashok', age: 60, parent: 0},
-    { id: 2, name: 'Sam', age: 40, parent: 1},
-    { id: 3, name: 'Sriya', age: 36, parent: 1},
-    { id: 4, name: 'Prakash', age: 20, parent: 2},
-    { id: 5, name: 'Sneha', age: 21, parent: 3},
-    { id: 6, name: 'Pritam', age: 60, parent: 34},
-    { id: 7, name: 'Roshan', age: 40, parent: 6},
-    { id: 8, name: 'Suraj', age: 36, parent: 6},
-    { id: 9, name: 'Swarup', age: 20, parent: 8},
-    { id: 10, name: 'Aditya', age: 21, parent: 8},
+  data: any[] = [
+    { id: 1, name: 'Bimal', age: 60, weight: 60, gender: 1, phone: 7930343463, parent: 0},
+    { id: 2, name: 'Bhagi', age: 40, weight: 90, gender: 1, phone: 7930343463, parent: 1},
+    { id: 3, name: 'Kalyana', age: 36, weight: 70, gender: 1, phone: 7930343463, parent: 1},
+    { id: 4, name: 'Prakash', age: 20, weight: 20, gender: 1, phone: 7930343463, parent: 2},
+    { id: 5, name: 'Jitendra', age: 21, weight: 60, gender: 1, phone: 7930343463, parent: 3},
+    { id: 6, name: 'Sunil', age: 60, weight: 80, gender: 1, phone: 7930343463, parent: 34},
+    { id: 7, name: 'Aditya', age: 40, weight: 60, gender: 1, phone: 7930343463, parent: 6},
+    { id: 8, name: 'Suraj', age: 36, weight: 60, gender: 1, phone: 7930343463, parent: 6},
+    { id: 9, name: 'Swarup', age: 20, weight: 40, gender: 1, phone: 7930343463, parent: 8},
+    { id: 10, name: 'Lakin', age: 21, weight: 55, gender: 1, phone: 7930343463, parent: 8},
   ];
 
     edit_configs: any = {
@@ -58,6 +58,22 @@ export class AddEditDeleteComponent {
           renderer: function(value) {
             return value + ' years';
           }
+        },
+        {
+          name: 'weight',
+          header: 'Weight'
+        },
+        {
+          name: 'gender',
+          header: 'Gender',
+          renderer: function(value) {
+            return value ? 'Male' : 'Female';
+          }
+        },
+        {
+          name: 'phone',
+          header: 'Phone',
+          width: '150px'
         }
       ]
     };
