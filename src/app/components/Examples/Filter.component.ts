@@ -4,9 +4,9 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   selector: 'app-filter-grid',
   template: `
     <h2>Filter Component</h2>
-    <db-angular-tree-grid>
+    <db-angular-tree-grid
     [data]="data" 
-    [configs]="configs"
+    [configs]="configs">
     </db-angular-tree-grid>
     <p>
     Enable filter at grid level to enable filter toolbar. Filter can be disabled at column level.
@@ -29,45 +29,45 @@ export class FilterComponent {
   ];
 
     configs: any = {
-    id_field: 'id',
-    parent_id_field: 'parent',
-    parent_display_field: 'name',
-    filter: true,
-    css: { // Optional
-      expand_class: 'fa fa-caret-right',
-      collapse_class: 'fa fa-caret-down',
-    },
-    columns: [
-      {
-        name: 'name',
-        header: 'Name',
-        editable: true
+      id_field: 'id',
+      parent_id_field: 'parent',
+      parent_display_field: 'name',
+      filter: true,
+      css: { // Optional
+        expand_class: 'fa fa-caret-right',
+        collapse_class: 'fa fa-caret-down',
       },
-      {
-        name: 'age',
-        header: 'Age',
-        editable: true,
-        renderer: function(value) {
-          return value + ' years';
+      columns: [
+        {
+          name: 'name',
+          header: 'Name',
+          editable: true
+        },
+        {
+          name: 'age',
+          header: 'Age',
+          editable: true,
+          renderer: function(value) {
+            return value + ' years';
+          }
+        },
+        {
+          name: 'weight',
+          header: 'Weight'
+        },
+        {
+          name: 'gender',
+          header: 'Gender',
+          renderer: function(value) {
+            return value ? 'Male' : 'Female';
+          }
+        },
+        {
+          name: 'phone',
+          header: 'Phone',
+          width: '150px'
         }
-      },
-      {
-        name: 'weight',
-        header: 'Weight'
-      },
-      {
-        name: 'gender',
-        header: 'Gender',
-        renderer: function(value) {
-          return value ? 'Male' : 'Female';
-        }
-      },
-      {
-        name: 'phone',
-        header: 'Phone',
-        width: '150px'
-      }
-    ]
+      ]
     };
 
     @ViewChild('iframe') iframe: ElementRef;
