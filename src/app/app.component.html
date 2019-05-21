@@ -15,46 +15,30 @@
         <ul>
           <li>
             <a 
-              href="#/basic_tree_grid" 
-              [ngClass]="{selected: selected_feature.basic_tree_grid}"
-              (click)="select('basic_tree_grid')"              
+              routerLink="/basic_tree_grid"  routerLinkActive="selected"
               >Basic Tree Grid</a>
           </li>
           <li>
-            <a href="#/add_edit_delete" 
-            [ngClass]="{selected: selected_feature.add_edit_delete}" 
-            (click)="select('add_edit_delete')"
+            <a routerLink="/add_edit_delete"  routerLinkActive="selected"
           >Add, Edit and Delete</a>
           </li>
           <li>
-            <a href="#/cond_row_edit"
-            [ngClass]="{selected: selected_feature.cond_row_edit}" 
-            (click)="select('cond_row_edit')"
+            <a routerLink="cond_row_edit"  routerLinkActive="selected"
             >Conditional Row Edit, Delete and CSS Class</a>
           </li>
           <li>
-            <a href="#/custom_view_component"
-            [ngClass]="{selected: selected_feature.custom_view_component}" 
-            (click)="select('custom_view_component')"
+            <a routerLink="custom_view_component"  routerLinkActive="selected"
             >Custom View Component</a>
           </li>
           <li>
-            <a href="#/custom_edit_component"
-            [ngClass]="{selected: selected_feature.custom_edit_component}" 
-            (click)="select('custom_edit_component')"
+            <a routerLink="custom_edit_component"  routerLinkActive="selected"
             >Custom Editor Component</a>
           </li>
           <li>
-            <a href="#/resolve_row_add"
-            [ngClass]="{selected: selected_feature.resolve_row_add}" 
-            (click)="select('resolve_row_add')"
-            >Resolve Row Add/Edit/Delete</a>
+            <a routerLink="resolve_row_add"  routerLinkActive="selected">Resolve Row Add/Edit/Delete</a>
           </li>
           <li>
-            <a href="#/filter_column"
-            [ngClass]="{selected: selected_feature.filter_column}" 
-            (click)="select('filter_column')"
-            >Filter</a>
+            <a routerLink="filter_column"  routerLinkActive="selected">Filter</a>
           </li>
         </ul>
       </td>
