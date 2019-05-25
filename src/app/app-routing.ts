@@ -9,7 +9,7 @@ import { EditDeleteResolverComponent } from './components/Examples/EditDeleteRes
 import { FilterComponent } from './components/Examples/Filter.component';
 
 const routes: Routes = [
-  { path: '', component: BasicTreeGridComponent },
+  { path: '', redirectTo: 'basic_tree_grid', pathMatch: 'full' },
   { path: 'basic_tree_grid', component: BasicTreeGridComponent },
   { path: 'add_edit_delete', component: AddEditDeleteComponent },
   { path: 'cond_row_edit', component: CondRowEditComponent },
