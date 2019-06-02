@@ -14,6 +14,7 @@ import {CustomCellViewComponent} from './components/Custom/CustomCellViewCompone
 import { EditDeleteResolverComponent } from './components/Examples/EditDeleteResolver.component';
 import { CustomEditorComponent } from './components/Examples/CustomEditor.component';
 import {AgeComponent} from './components/Custom/Age.component';
+import { SelectionComponent } from './components/Examples/Selection.component';
 
 @NgModule({
   imports:      [ 
@@ -32,7 +33,8 @@ import {AgeComponent} from './components/Custom/Age.component';
     EditDeleteResolverComponent,
     FilterComponent,
     CustomEditorComponent,
-    AgeComponent
+    AgeComponent,
+    SelectionComponent
   ],
   bootstrap:    [ AppComponent ],
   entryComponents: [CustomCellViewComponent, AgeComponent]

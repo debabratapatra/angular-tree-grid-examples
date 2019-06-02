@@ -7,6 +7,7 @@ import { CustomViewComponent } from './components/Examples/CustomViewComponent';
 import { CustomEditorComponent } from './components/Examples/CustomEditor.component';
 import { EditDeleteResolverComponent } from './components/Examples/EditDeleteResolver.component';
 import { FilterComponent } from './components/Examples/Filter.component';
+import { SelectionComponent } from './components/Examples/Selection.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'basic_tree_grid', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'custom_view_component', component: CustomViewComponent },
   { path: 'custom_edit_component', component: CustomEditorComponent },
   { path: 'resolve_row_add', component: EditDeleteResolverComponent },
-  { path: 'filter_column', component: FilterComponent }
+  { path: 'filter_column', component: FilterComponent },
+  { path: 'selection', component: SelectionComponent }
 ];
  
 @NgModule({
