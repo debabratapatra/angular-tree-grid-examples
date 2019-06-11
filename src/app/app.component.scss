@@ -1,6 +1,6 @@
 div.header {
   height: 4rem;
-  background-color: #f6f5f5;
+  background-color: rgb(60, 60, 60);
   position: relative;
 }
 
@@ -14,12 +14,11 @@ div.navigator a.navigator-btn {
   padding: 0.8rem 1rem;
   text-decoration: none;
   font-size: 1.2rem;
-  color: black;
+  color: white;
 }
 
 div.navigator a.navigator-btn:hover {
-  background-color: #e2e2e2;
-  border-radius: 3px;
+  color: gray;
 }
 
 .custom_class {
@@ -29,7 +28,7 @@ div.navigator a.navigator-btn:hover {
 div.title-header {
   margin-top: 20px;
   text-align: center;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 35px;
 }
 
@@ -81,4 +80,3 @@ td.content {
         padding: 1rem 1rem;
     }
 }
-

@@ -15,6 +15,7 @@ import { EditDeleteResolverComponent } from './components/Examples/EditDeleteRes
 import { CustomEditorComponent } from './components/Examples/CustomEditor.component';
 import {AgeComponent} from './components/Custom/Age.component';
 import { SelectionComponent } from './components/Examples/Selection.component';
+import { SubgridComponent } from './components/Examples/Subgrid.component';
 
 @NgModule({
   imports:      [ 
@@ -34,7 +35,8 @@ import { SelectionComponent } from './components/Examples/Selection.component';
     FilterComponent,
     CustomEditorComponent,
     AgeComponent,
-    SelectionComponent
+    SelectionComponent,
+    SubgridComponent
   ],
   bootstrap:    [ AppComponent ],
   entryComponents: [CustomCellViewComponent, AgeComponent]
