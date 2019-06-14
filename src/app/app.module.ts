@@ -16,6 +16,8 @@ import { CustomEditorComponent } from './components/Examples/CustomEditor.compon
 import {AgeComponent} from './components/Custom/Age.component';
 import { SelectionComponent } from './components/Examples/Selection.component';
 import { SubgridComponent } from './components/Examples/Subgrid.component';
+import { DynamicChildrenComponent } from './components/Examples/DynamicChildren.component';
+import { SpecificExpandCollapseComponent } from './components/Examples/SpecificExpandCollapse.component';
 
 @NgModule({
   imports:      [ 
@@ -36,7 +38,9 @@ import { SubgridComponent } from './components/Examples/Subgrid.component';
     CustomEditorComponent,
     AgeComponent,
     SelectionComponent,
-    SubgridComponent
+    SubgridComponent,
+    DynamicChildrenComponent,
+    SpecificExpandCollapseComponent
   ],
   bootstrap:    [ AppComponent ],
   entryComponents: [CustomCellViewComponent, AgeComponent]
