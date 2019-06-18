@@ -11,6 +11,7 @@ import { SelectionComponent } from './components/Examples/Selection.component';
 import { SubgridComponent } from './components/Examples/Subgrid.component';
 import { DynamicChildrenComponent } from './components/Examples/DynamicChildren.component';
 import { SpecificExpandCollapseComponent } from './components/Examples/SpecificExpandCollapse.component';
+import { SummaryRowComponent } from './components/Examples/SummaryRow.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'selection', component: SelectionComponent },
   { path: 'subgrid', component: SubgridComponent },
   { path: 'dynamic_children', component: DynamicChildrenComponent },
-  { path: 'specific_expand_collapse', component: SpecificExpandCollapseComponent }
+  { path: 'specific_expand_collapse', component: SpecificExpandCollapseComponent },
+  { path: 'summary_row', component: SummaryRowComponent }
 ];
  
 @NgModule({
