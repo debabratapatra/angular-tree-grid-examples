@@ -17,7 +17,7 @@ import {CustomCellViewComponent} from './../Custom/CustomCellViewComponent';
     </code>See below code for more details.
     </p>
     <p>
-    <b>Note:</b> Add, Edit, Delete features are disabled for Subgrid for now. 
+    <b>Note:</b> Add fearture is disabled for Subgrid for now. 
     </p>
     <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
   `
