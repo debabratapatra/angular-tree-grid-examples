@@ -16,6 +16,9 @@ import { AngularTreeGridComponent } from 'angular-tree-grid';
     <p>
     Children can be loaded dynamically. Let's suppose we want to load children on expand. Then set load_children_on_expand to true and listen to the expand event. See Below.
     </p>
+    <p>
+    A child can be treated as a leaf node(won't have expand icon) if dynamic_node_leaf is set to true in the object. See below.
+    </p>
     <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
   `
 })
@@ -71,7 +74,7 @@ export class DynamicChildrenComponent {
     const row_data = e.data;
     if (row_data.id === 1) {
       setTimeout(() => {
-        e.resolve([{ id: 4, name: 'Ashok', age: 60, weight: 60, gender: 1, phone: 7930343463},
+        e.resolve([{ id: 4, name: 'Ashok', age: 60, weight: 60, gender: 1, phone: 7930343463, dynamic_node_leaf: true},
           { id: 5, name: 'Sam', age: 40, weight: 60, gender: 1, phone: 7930343463},
           { id: 6, name: 'Sriya', age: 36, weight: 60, gender: 1, phone: 7930343463}]);
       }, 2000);
