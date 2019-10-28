@@ -37,6 +37,11 @@ export class CondRowEditComponent {
       delete: true,
       edit_parent: true
     },
+    css: { // Optional
+      expand_class: 'fa fa-caret-right',
+      collapse_class: 'fa fa-caret-down',
+      add_class: 'fa fa-plus',
+    },
     columns: [
       {
         name: 'name',

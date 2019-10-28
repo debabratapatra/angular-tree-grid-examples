@@ -30,6 +30,11 @@ export class CustomEditorComponent {
       id_field: 'id',
       parent_id_field: 'parent',
       parent_display_field: 'name',
+      css: { // Optional
+        expand_class: 'fa fa-caret-right',
+        collapse_class: 'fa fa-caret-down',
+        add_class: 'fa fa-plus',
+      },
       actions: {
         add: true,
         edit: true,
