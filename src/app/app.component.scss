@@ -45,9 +45,8 @@ td.left-panel {
     list-style: none;
     padding-left: 10px;
   }
-  
-  li {
 
+  li {
     a {
       text-decoration: none;
       padding: 16px 16px;
@@ -71,12 +70,21 @@ td.content {
   width: 60%;
 }
 
-@media only screen and (max-width: 800px) {
-    div.navigator {
-        right: 0;
-    }
+span.donate {
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  a {
+    text-decoration: none;
+  }
+}
 
-    div.content {
-        padding: 1rem 1rem;
-    }
+@media only screen and (max-width: 800px) {
+  div.navigator {
+    right: 0;
+  }
+
+  div.content {
+    padding: 1rem 1rem;
+  }
 }
