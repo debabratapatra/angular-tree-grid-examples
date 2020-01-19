@@ -10,7 +10,7 @@
     "@angular/platform-browser": "^7.2.15",
     "@angular/platform-browser-dynamic": "^7.2.15",
     "@angular/router": "^7.2.15",
-    "angular-tree-grid": "^2.7.3",
+    "angular-tree-grid": "^2.7.8",
     "core-js": "2.5.4",
     "font-awesome": "^4.7.0",
     "rxjs": "^6.5.2",
