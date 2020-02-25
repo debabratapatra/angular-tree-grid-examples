@@ -94,12 +94,5 @@ export class BasicTreeGridComponent {
       doc.open();
       doc.write(content);
       doc.close();
-
-      setTimeout(() => {
-        this.data = [
-          { id: 1, name: 'Ashok', age: 60, parent: 0, weight: 60, gender: 1, phone: 7930343463},
-          { id: 2, name: 'Sam', age: 40, parent: 1, weight: 60, gender: 1, phone: 7930343463},
-        ];
-      }, 5000);
   }
 }
