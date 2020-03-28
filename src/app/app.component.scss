@@ -73,10 +73,33 @@ td.content {
 span.donate {
   font-size: 20px;
   position: absolute;
-  right: 20px;
+  right: 110px;
   a {
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
+}
+
+span.buypro {
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  a {
+    color: #ff9e0c;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+span.pro {
+  color: #ff9e0c;
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 800px) {
