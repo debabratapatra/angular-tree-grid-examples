@@ -2,19 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-edit-resolver-tree-grid',
-  template: `
-    <h2>Add, Edit and Delete Resolver Component</h2>
-    <db-angular-tree-grid 
-    [data]="data" 
-    [configs]="configs"
-    (rowdelete)="onRowDelete($event)" 
-    (rowsave)="onRowSave($event)" 
-    (rowadd)="onRowAdd($event)">
-    </db-angular-tree-grid>
-    <p>If Add, Edit and Delete needs to be resolved after confirmation from backend then resolve_add, resolve_edit and resolve_delete needs to be set to true under actions config. And then listen to the rowadd, rowsave and rowdelete events. See below for more details.
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/resolver.component.html'
 })
 export class EditDeleteResolverComponent {
   data: any[] = [

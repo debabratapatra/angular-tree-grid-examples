@@ -9,6 +9,10 @@ h2 {
     font-weight: 500;
 }
 
+p {
+    line-height: 1.6;
+}
+
 button {
     margin-right: 10px;
     background-color: transparent;
@@ -22,10 +26,10 @@ button:hover {
 }
 
 span.code {
-    padding: 2px 4px;
+    padding: 2px 6px;
     color: #1f1f1f;
     background-color: #f0f0f0;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
 }
 

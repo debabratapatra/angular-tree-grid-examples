@@ -3,24 +3,7 @@ import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-filter-grid',
-  template: `
-    <h2>Dynamic Children Component</h2>
-    <button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
-    <p></p>
-    <db-angular-tree-grid 
-    #angularGrid
-    (expand)="onExpand($event)"
-    [data]="data" 
-    [configs]="configs">
-    </db-angular-tree-grid>
-    <p>
-    Children can be loaded dynamically. Let's suppose we want to load children on expand. Then set load_children_on_expand to true and listen to the expand event. See Below.
-    </p>
-    <p>
-    A child can be treated as a leaf node(won't have expand icon) if leaf_node is set to true in the object. See below.
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/dynamicChildren.component.html'
 })
 export class DynamicChildrenComponent {
   @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;

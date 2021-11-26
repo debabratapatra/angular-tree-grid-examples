@@ -2,15 +2,7 @@ import { Component, ViewChild, ElementRef  } from '@angular/core';
 
 @Component({
   selector: 'app-add-edit-grid',
-  template: `
-    <h2>With Add, Edit and Delete Option</h2>
-    <db-angular-tree-grid [data]="data" [configs]="edit_configs" (add)="onAdd($event)"></db-angular-tree-grid>
-    <p> If Parent of records needs to be changed while editing then set edit_parent to true. Icon class for Expand, Collapse, Edit, Cancel, Delete and Add can be given under css property of the Grid. See documentation for more details.
-
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0">
-  </iframe> 
-  `,
+  templateUrl: 'htmls/addEditDelete.component.html'
 })
 export class AddEditDeleteComponent {
   data: any[] = [

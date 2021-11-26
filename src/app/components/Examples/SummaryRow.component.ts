@@ -3,13 +3,7 @@ import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-summary-row-grid',
-  template: `
-    <h2>Summary Row</h2>
-    <db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
-    <p>Set show_summary_row to true at the grid level and use summary_renderer at the column level. 
-        summary_renderer gets whole data array as an argument.</p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/summary.component.html'
 })
 export class SummaryRowComponent {
   data: any = [

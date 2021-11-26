@@ -3,16 +3,7 @@ import {CustomCellViewComponent} from './../Custom/CustomCellViewComponent';
 
 @Component({
   selector: 'app-view-tree-grid',
-  template: `
-    <h2>Custom View Component</h2>
-    <p></p>
-    <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
-    <p>For Custom component, type of the column should be set to 'custom' and Custom Component should be set in component config of the Column. 
-    This component need to be added to the entryComponents of the module.
-    See below for more details.
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/customview.component.html'
 })
 export class CustomViewComponent {
 

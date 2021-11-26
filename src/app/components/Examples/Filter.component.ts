@@ -3,24 +3,7 @@ import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-filter-grid',
-  template: `
-    <h2>Filter Component</h2>
-    <button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
-    <p></p>
-    <db-angular-tree-grid 
-    #angularGrid
-    [data]="data" 
-    [configs]="configs">
-    </db-angular-tree-grid>
-    <p>
-    Enable filter at grid level to enable filter toolbar. Filter can be disabled at column level.
-    </p>
-    <p>
-    A <b>custom</b> filter function can be assigned to filter_function. See weight column below.
-     It gets Row data, column configuration, column value and filter value as arguments.
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/customfilter.component.html'
 })
 export class FilterComponent {
   @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;

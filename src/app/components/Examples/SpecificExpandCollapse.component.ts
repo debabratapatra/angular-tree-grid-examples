@@ -3,15 +3,7 @@ import { AngularTreeGridComponent } from 'angular-tree-grid';
 
 @Component({
   selector: 'app-basic-tree-grid',
-  template: `
-    <h2>Specific Row Expand/Collapse</h2>
-    <button (click)="collapseRow(6)">Collapse Sunil</button>
-    <button (click)="expandRow(1)">Expand Bimal</button>
-    <p></p>
-    <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
-    <p>Sometimes we may need to expand or Collapse a specific Row.</p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/expand.component.html'
 })
 export class SpecificExpandCollapseComponent {
   @ViewChild('angularGrid') angularGrid: AngularTreeGridComponent;

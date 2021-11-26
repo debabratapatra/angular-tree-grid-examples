@@ -3,24 +3,7 @@ import {CustomCellViewComponent} from './../Custom/CustomCellViewComponent';
 
 @Component({
   selector: 'app-subgrid-grid',
-  template: `
-    <h2>Angular Subgrid Component</h2>
-    <db-angular-tree-grid 
-    (expand)="onExpand($event)"
-    [data]="data" 
-    [configs]="configs">
-    </db-angular-tree-grid>
-    <p>
-    Basically on expand of the row, Child-rows will be loaded to the grid. An Ajax can be called for the same. Rows will be added only when resolve is called by passing child rows as an argument on expand event. <br>
-    <code>
-      "e.resolve(data)"
-    </code>See below code for more details.
-    </p>
-    <p>
-    <b>Note:</b> Add fearture is disabled for Subgrid for now. 
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/subgrid.component.html'
 })
 export class SubgridComponent {
     data: any[] = [

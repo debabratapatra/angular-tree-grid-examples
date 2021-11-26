@@ -3,14 +3,7 @@ import {AgeComponent} from './../Custom/Age.component';
 
 @Component({
   selector: 'app-editor-tree-grid',
-  template: `
-    <h2>Custom Editor Component</h2>
-    <db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
-    <p>Custom Editor can be set in the editor config of the column. This Component needs to be extended from DefaultEditor and need to be added to the entryComponents of the module.
-    See below for more details.
-    </p>
-    <iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 50px 0 0 0;border:0"></iframe> 
-  `
+  templateUrl: 'htmls/customeditor.component.html'
 })
 export class CustomEditorComponent {
   data: any[] = [
