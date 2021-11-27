@@ -3,7 +3,7 @@
 <p>Icon class for Expand, Collapse, Edit, Cancel, Delete and Add can be given under css property of the Grid.</p>
 
 <h3>CSS</h3>
-Below Configuration needs to be enabled.
+Icons can be customized by setting a css class. Please check below.
 <pre class="code">
     <span class="tr first-row"><span class="th"></span><code>{{"css: { "}}</code></span>
     <span class="tr e"><span class="th"></span><code>{{"    expand_class: 'fa fa-caret-right',"}}</code></span>
@@ -15,7 +15,7 @@ Below Configuration needs to be enabled.
     <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
 </pre>
 
-<h3>Action</h3>
+<h3>Actions</h3>
 Below Configuration needs to be enabled.
 <p> If Parent of records needs to be changed while editing then set <span class="code">edit_parent</span> to true. </p>
 <pre class="code">
@@ -25,6 +25,13 @@ Below Configuration needs to be enabled.
     <span class="tr e"><span class="th"></span><code>{{"    delete: true,"}}</code></span>
     <span class="tr "><span class="th"></span><code>{{"    edit_parent: true,"}}</code></span>
     <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+
+<h3>Column Editable</h3>
+<p>By default all columns are editable if edit set to true at the Grid level. However it can be managed at the column
+level through <span class="code">editable</span>.</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"editable: true"}}</code></span>
 </pre>
 
 <div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
