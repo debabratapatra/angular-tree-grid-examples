@@ -2,7 +2,7 @@
 <db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
 <p> If some rows in the grid shouldn't be edited or deleted then <span class="code">row_edit_function</span> and 
     <span class="code">row_delete_function</span> methods can
-    be set at the grid level. These methods will get row_data as arguments.
+    be set at the grid level. These methods will get the respected record(row data) as an argument.
 </p>
 <h3>Row Edit Function</h3>
 <pre class="code">
@@ -24,7 +24,8 @@
     <span class="tr e"><span class="th"></span><code>{{"  }"}}</code></span>
     <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
 </pre>
-<p> If some rows need to be highlighted in the grid then <span class="code">row_class_function</span> function can be set.
+<p> If some rows need to be highlighted in the grid then <span class="code">row_class_function</span> 
+    function can be used.
 </p>
 <h3>Row Class Function</h3>
 <pre class="code">

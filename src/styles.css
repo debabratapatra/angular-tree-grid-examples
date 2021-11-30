@@ -21,6 +21,15 @@ button {
     cursor: pointer;
 }
 
+pre.prettyprint {
+    border-color: #d1cece !important;
+}
+
+.short-code {
+    display: inline-block;
+    background-color: #f9f9f9;
+}
+
 button:hover {
     border-color: #01475b;
 }

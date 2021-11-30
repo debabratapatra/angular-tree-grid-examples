@@ -2,11 +2,12 @@
 <p></p>
 <db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
 <h3>Custom Component</h3>
-<p> For Custom component, type of the column should be set to 'custom' and Custom Component should be set in component
-    config of the Column. </p>
+<p> For Custom component, type of the column should be set to <b>'custom'</b> and Custom Component should be set. </p>
 <pre class="code">
-    <span class="tr first-row"><span class="th"></span><code>{{"type: 'custom',"}}</code></span>
-    <span class="tr e"><span class="th"></span><code>{{"component: CustomCellViewComponent"}}</code></span>
+    <span class="tr first-row"><span class="th"></span><code>{{"{"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    type: 'custom',"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    component: CustomCellViewComponent"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
 </pre>
 <p> Please check below how to create a cusotm component.
     This component needs to be added to the <b>entryComponents</b> of the module.

@@ -2,9 +2,9 @@
 <db-angular-tree-grid [data]="data" [configs]="configs" (rowdelete)="onRowDelete($event)" (rowsave)="onRowSave($event)"
     (rowadd)="onRowAdd($event)">
 </db-angular-tree-grid>
-<p>If Add, Edit and Delete needs to be resolved after confirmation from backend then 
+<p>If Add, Edit and Delete need to be resolved after confirmation from backend then 
     <span class="code">resolve_add</span>, <span class="code">resolve_edit</span> and
-    <span class="code">resolve_delete</span> needs to be set to true under actions config. 
+    <span class="code">resolve_delete</span> need to be set to true under <span class="code">actions</span> config. 
     And then listen to the <span class="code">rowadd</span>, <span class="code">rowsave</span>
      and <span class="code">rowdelete</span> events. See below for more details.
 </p>
@@ -18,7 +18,7 @@ Below Configuration needs to be enabled.
     <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
 </pre>
 <h3>Resolve</h3>
-<p>This is how action needs to be resolved. Then only modified record will be saved in the grid.</p>
+<p>This is how action needs to be resolved. Then only modified record will be reflected in the grid.</p>
 <pre class="code">
     <span class="tr first-row"><span class="th"></span><code>{{"onRowSave($e) {"}}</code></span>
     <span class="tr e"><span class="th"></span><code>{{"    const data = $e.data;"}}</code></span>
