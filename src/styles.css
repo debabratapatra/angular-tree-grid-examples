@@ -102,3 +102,71 @@ pre.code span.e code {
 pre.code span.th::before {
     content: counter(linenum) ".";
 }
+
+span.buypro {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+} 
+span.buypro  a {
+    color: #ff9e0c;
+    text-decoration: none;
+}
+span.buypro:hover {
+    text-decoration: underline;
+}
+
+div.ads {
+    text-align: center;
+    margin: 10px;
+}
+
+div.header {
+    height: 4.2rem;
+    background-color: #202020;
+    position: relative;
+  }
+  
+  div.navigator {
+    position: absolute;
+    right: 10rem;
+    top: 1.9rem;
+  }
+  
+  div.navigator a.navigator-btn {
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  div.navigator a.navigator-btn:hover {
+    color: gray;
+  }
+  
+  .custom_class {
+    background-color: green;
+  }
+  
+  div.title-header {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+  }
+  
+  div.title-header h1 {
+    font-weight: 600;
+    font-size: 40px;
+    display: inline;
+  }
+  
+  
+  span.donate {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+  }
+  span.donate a {
+    text-decoration: none;
+  }
