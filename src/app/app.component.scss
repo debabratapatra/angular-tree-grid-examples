@@ -3,8 +3,9 @@ div.body {
   margin-top: 20px;
 }
 
-td.left-panel {
+div.left-panel {
   width: 25%;
+  display: inline-block;
   vertical-align: top;
   padding-right: 10px;
   ul {
@@ -30,8 +31,9 @@ td.left-panel {
   }
 }
 
-td.content {
+div.content {
   width: 60%;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 800px) {
@@ -40,5 +42,11 @@ td.content {
   }
   div.content {
     padding: 1rem 1rem;
+  }
+  div.left-panel {
+    width: 100%;
+  }
+  div.content {
+    width: 100%;
   }
 }
